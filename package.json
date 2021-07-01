@@ -1,0 +1,23 @@
+{
+  "name": "wssrv",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "author": "myoshimi <443030net@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.12.5",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.7",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "dev:watch": "ts-node-dev --respawn src/index.ts",
+    "clean": "rimraf dist/*",
+    "tsc": "tsc",
+    "build": "npm-run-all clean tsc",
+    "start": "node ."    
+  }
+}
